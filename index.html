@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="lorem">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Mads</title>
+    <style>
+/***
+    Optional:
+    Since ads are always loaded after the page has rendered, you'll get one 1 reflow
+    for every ad that is displayed.If you want to prevent this from happening,
+    set a min-height and/or min-width of ads based on their data attributes
+
+    Note that the default options will NOT try to re-download ads if something goes wrong,
+    so either make sure that something sensible is displayed or hide them in a try/catch
+
+***/
+    .js-mad-ads[data-adspace_height_min="54"]   { min-height: 54px;}
+    .js-mad-ads[data-adspace_height_min="108"]  { min-height: 108px;}
+    .js-mad-ads[data-adspace_height_min="120"]  { min-height: 120px;}
+    .js-mad-ads[data-adspace_height_min="216"]  { min-height: 216px;}
+    </style>
+</head>
+
+<body>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <div id="mads-test-1" class="js-mad-ads" data-ad_type="live" data-adspace_height_min="54" data-adspace_height_max="216"></div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <div id="mads-test-2" class="js-mad-ads" data-ad_type="live" data-adspace_height_min="54" data-adspace_height_max="54"></div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <div id="mads-test-3" class="js-mad-ads" data-ad_type="live" data-adspace_height_min="120" data-adspace_height_max="120"></div>
+
+    <script src="mads.js"></script>
+
+    <script>
+    // No ready handler necessary since at this point, the DOM has been constructed already...
+    TG.mads.showAllAds("js-mad-ads");
+    </script>
+
+</body>
+</html>
